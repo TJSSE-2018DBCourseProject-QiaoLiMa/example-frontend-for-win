@@ -34,7 +34,7 @@ python -m http.server [端口号]
 
 但是由于后端中代码写的是8080，没安装过nginx建议使用8080端口号
 
-如果不使用8080需要更改后端Startup.cs中的端口号
+**如果不使用8080需要更改后端Startup.cs中的端口号**
 
 ```
  app.UseCors(
@@ -54,7 +54,7 @@ app.UseCors(
 
 5.开启后台应用后，点击会弹出数据库中testtable1中的id
 
-____
+______
 
 
 
