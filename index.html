@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div id="app-5">
+    <button @click="reverseMessage">点击获取</button>
+</div>
+
+
+<script>
+
+    var app5 = new Vue({
+        el: '#app-5',
+        methods: {
+            reverseMessage: function () {
+                axios.get('http://192.168.1.101:5002/hello')
+                    .then(function (response) {
+                        // handle success
+                        console.log(response.data);
+                        alert(response.data)
+                    })
+                    .catch(function (error) {
+                        // handle error
+                        console.log(error);
+                    })
+                    .then(function () {
+                        // always executed
+                    });
+            }
+        }
+    })
+
+</script>
+
+</body>
+</html>
